@@ -1,6 +1,0 @@
-
-@import './helpers/color'; // 定義顏色
-@import './layout/base'; // 標籤 如 * | body | input:checkbox
-
-// layout | 頁面
-@import './layout/main';   // 共通性質(layout) (如果要覆蓋bootstrap的東西我寫這裡XD)
