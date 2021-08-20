@@ -1,10 +1,95 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<!-- 熱門特展 -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首頁 | 藝術展覽</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> -->
+    <!-- google-icon -->
+    <link rel="stylesheet" href="./assets/style/helpers/google_icon.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <!-- navbar-expand-lg顯示登入 -->
+    <header class="navbar navbar-expand-lg navbar-light py-4 py-md-7 border-bottom border-secondary">
+      <div class="container d-flex justify-content-end align-items-center position-relative">
+        <h1 class="d-flex align-items-center position-absolute top-50 start-50 translate-middle ">
+          <a href="./index.html" class="navbar-brand text-primary text-uppercase p-0">EXHIBINECTION</a>
+        </h1>
+        <!-- collapse navbar-collapse漢堡 -->
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link py-0" href="javascript:void(0)">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-0" href="javascript:void(0)">Sign up</a>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn d-flex position-relative" data-bs-toggle="toggleTicketBar" data-bs-target="#myToggleTicketBar">
+          <i class="material-icons">confirmation_number</i>
+          <span class="position-absolute top-0 end-0 badge rounded-pill bg-strong">3</span>
+        </button>
+      </div>
+    </header>
+
+    
+      <section class="header-top-banner">
+        <div class="container h-100">
+          <div class="row align-items-center h-100 flex-nowrap">
+            <div class="offset-lg-1 col-lg-auto">
+              <h2 class="text-white text-nowrap lh-lg">台北當代藝術展</h2>
+              <h5 class="text-white text-nowrap lh-lg mb-4">01 JUN - 31 OCT</h5>
+              <div class="d-flex justify-content-between justify-content-sm-start">
+                <button class="py-2 px-12 btn btn-strong me-2 w-100" type="button">購買票券</button>
+                <button class="py-2 px-12 btn btn-outline-light w-100" type="button">詳細資訊</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
+    <!-- 導覽列 -->
+    <div class=" border-bottom border-secondary everynav position-sticky top-0 bg-light">
+      <div class="container-xl d-flex justify-content-between">
+        <nav class="swiper-container mySwiper text-nowrap user-select-none">
+          <ul class="swiper-wrapper flex-nowrap nav text-center">
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">音樂</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">戲劇</a></li>
+            <li class="swiper-slide nav-item"><a href="./design.html"      class="m-2 nav-link text-secondary">設計</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">藝術</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">美食</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">旅遊</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">電影</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">親子</a></li>
+            <li class="swiper-slide nav-item"><a href="javascript:void(0)" class="m-2 nav-link text-secondary">期間限定</a></li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </nav>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- 熱門特展 -->
 <section class="mb-15">
   <div class="container mt-15 p-0">
     <h1 class="mb-6 fs-2 ps-4 ps-md-0">熱門特展</h1>
@@ -164,3 +249,54 @@ current: index
   </div>
 </section>
 
+
+
+
+
+
+    <footer class="footer">
+      <!-- banner -->
+      <div class="banner d-flex justify-content-start align-items-end">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-9">
+              <h2 class="text-white text-nowrap mb-4 lh-base" >想收到最新消息嗎？<br>快訂閱我們！</h2>
+              <form class="input-group mb-3">
+                <input type="text" class="form-control p-3 " placeholder="輸入您的電子信箱" requiredaria-label="輸入您的電子信箱" aria-describedby="subscribeBtn">
+                <button class="py-3 px-13 btn btn-strong" type="button" id="subscribeBtn">訂閱</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light py-4 py-md-7">
+        <div class="container d-flex align-items-center position-relative">
+          <div class="d-flex align-items-center flex-wrap">
+            <p class="d-flex align-items-center m-0">
+              <a href="./index.html" class="navbar-brand text-primary text-uppercase p-0">EXHIBINECTION</a>
+            </p>
+            <p class="m-0">© 2020. All Rights Reserved.</p>
+          </div>
+          <!-- collapse navbar-collapse漢堡 -->
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="javascript:void(0)">Sign in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="javascript:void(0)">Sign up</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
